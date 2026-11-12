@@ -1,10 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <title>我的第一个网页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人名片</title>
+    <style>
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 炫酷的深色渐变背景 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        /* 毛玻璃卡片效果 */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 380px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* 鼠标悬停时卡片微微上浮 */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 头像样式 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        /* 名字和简介 */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #a0aec0;
+            margin-bottom: 25px;
+        }
+
+        /* 按钮容器 */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* 按钮悬停发光效果 */
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, GitHub!（成功版本）</h1>
-  <p>这是我放进仓库的第一个文件。</p>
+
+    <div class="card">
+        <!-- 这是一个随机头像，你可以换成你自己的图片链接 -->
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Felix" alt="我的头像" class="avatar">
+        
+        <h1>你的名字</h1>
+        <p class="title">AI 学习者 / 未来的全栈开发者</p>
+
+        <div class="links">
+            <a href="https://github.com/bo20239911-cmyk" class="btn" target="_blank">👉 我的 GitHub</a>
+            <a href="mailto:你的邮箱@example.com" class="btn">✉️ 联系我</a>
+            <a href="#" class="btn">🌐 我的其他作品</a>
+        </div>
+    </div>
+
 </body>
 </html>
